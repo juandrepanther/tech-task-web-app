@@ -10,7 +10,7 @@ export const useAppStore = create<Types>()(
   devtools(
     persist(
       (set) => ({
-        theme: 'light',
+        theme: 'dark',
         changeTheme: () => set((state) => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
       }),
       { name: 'store' },
