@@ -1,12 +1,13 @@
-import { useAppStore } from './store/store'
-import './global.scss'
+// import { useAppStore } from './store/store'
+import './styles/_themes.scss'
+import { Home } from './pages/home/home'
 
 export default function App() {
-  const { theme } = useAppStore()
+  // const { theme } = useAppStore()
 
   return (
-    <div>
-      <h3>Happy coding! With Zustand. Theme is: {theme}</h3>
-    </div>
+    <>
+      <Home />
+    </>
   )
 }
