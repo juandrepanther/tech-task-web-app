@@ -25,6 +25,7 @@
       }
 
       .appbar__menu__item {
+        user-select: none;
         display: flex;
         align-items: center;
         height: 100%;
