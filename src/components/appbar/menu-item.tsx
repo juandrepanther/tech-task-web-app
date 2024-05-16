@@ -24,7 +24,7 @@ export const MenuItem = ({ menu: { url, menuItem } }: Props) => {
 
   return (
     <div onClick={selectPage} className={`appbar__menu__item ${selectedStyle}`}>
-      {menuItem}
+      <h6>{menuItem}</h6>
     </div>
   )
 }

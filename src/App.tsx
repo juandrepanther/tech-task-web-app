@@ -4,6 +4,10 @@ import { ThemeContext } from './context/theme-context'
 
 import './styles/_themes.scss'
 import './styles/_common.scss'
+import Details from './pages/details/details'
+import Contacts from './pages/contacts/contacts'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Appbar from './components/appbar/appbar'
 
 export default function App() {
   const { darkTheme } = useContext(ThemeContext)
@@ -15,8 +19,14 @@ export default function App() {
   }, [darkTheme])
 
   return (
-    <>
-      <Home />
-    </>
+    <BrowserRouter>
+      <Appbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/details" element={<Details />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="*" element={<div>404</div>} />
+      </Routes>
+    </BrowserRouter>
   )
 }

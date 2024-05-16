@@ -5,3 +5,8 @@ export interface MenuType {
   url: UrlType
 }
 export type SelectedMenuType = 'selected__menu__item' | ''
+
+export enum Theme {
+  DARK = 'dark',
+  LIGHT = 'light',
+}
