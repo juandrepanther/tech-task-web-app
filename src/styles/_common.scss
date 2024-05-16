@@ -1,0 +1,36 @@
+@import './_breakpoints.scss';
+
+@mixin sm {
+  @media (max-width: $small-screen) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: $medium-screen) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: $large-screen) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: $extra-large-screen) {
+    @content;
+  }
+}
+@mixin xxl {
+  @media (min-width: $extra-extra-large-screen) {
+    @content;
+  }
+}
+
+.container {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.page {
+  max-width: $extra-large-screen;
+}

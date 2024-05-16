@@ -2,23 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 html[data-theme='dark'] {
-  --background-color: #{$neutral-900};
   --color: #{$neutral-0};
-
+  --background-color: #{$neutral-900};
+  --background-color-grey: #{$grey-2};
   --primary-color: #{$primary-500};
   --secondary-color: #{$neutral-500};
-
   --card-background-color: #{$dark-overlay-8};
   --card-border-color: #{$neutral-700};
 }
 
 html[data-theme='light'] {
-  --background-color: #{$white-2};
   --color: #{$black-1};
-
+  --background-color: #{$white-2};
+  --background-color-grey: #{$grey-2};
   --primary-color: #{$blue-1};
   --secondary-color: #{$grey-3};
-
   --card-background-color: #{$white-1};
   --card-border-color: #{$grey-2};
 }

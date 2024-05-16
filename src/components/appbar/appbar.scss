@@ -1,0 +1,21 @@
+.appbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  background-color: var(--background-color-grey);
+  border: 1px solid var(--card-border-color);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+
+  .appbar__top {
+    height: 3rem;
+  }
+
+  .appbar__bottom {
+    background-color: white;
+    height: calc(100% - 3rem);
+  }
+}
