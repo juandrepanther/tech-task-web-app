@@ -1,0 +1,19 @@
+html[data-theme='light'] {
+  --color: #{$black-1};
+  --background-color: #{$white-1};
+  --background-color-grey: #{$grey-1};
+  --primary-color: #{$blue-1};
+  --secondary-color: #{$grey-2};
+  --card-background-color: #{$white-1};
+  --card-border-color: #{$grey-1};
+}
+
+html[data-theme='dark'] {
+  --color: #{$neutral-0};
+  --background-color: #{$neutral-900};
+  --background-color-grey: #{$white-1};
+  --primary-color: #{$primary-500};
+  --secondary-color: #{$neutral-500};
+  --card-background-color: #{$dark-overlay-8};
+  --card-border-color: #{$neutral-700};
+}

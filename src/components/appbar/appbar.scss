@@ -12,10 +12,29 @@
 
   .appbar__top {
     height: 3rem;
+
+    .appbar__menu__wrapper {
+      display: flex;
+      height: 100%;
+    }
+
+    .appbar__menu__item {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      background-color: var(--background-color-grey);
+      padding: 0 4rem;
+      cursor: pointer;
+    }
   }
 
   .appbar__bottom {
     background-color: white;
     height: calc(100% - 3rem);
   }
+}
+
+.selected__menu__item {
+  background-color: white !important;
+  font-weight: 700;
 }
