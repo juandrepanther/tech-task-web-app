@@ -4,13 +4,21 @@ import { SelectedMenuType, MenuType } from '../../types'
 
 interface Props {
   menu: MenuType
+  setIsOpenMobileMenu?: (isOpenMobileMenu: boolean) => void
 }
-export const MenuItem = ({ menu: { url, menuItem } }: Props) => {
+export const MenuItem = ({ menu: { url, menuItem }, setIsOpenMobileMenu }: Props) => {
   const navigate = useNavigate()
   const { pathname } = useLocation()
   const [selectedStyle, setSelectedStyle] = useState<SelectedMenuType>('')
 
-  const selectPage = () => navigate(url)
+  const selectPage = () => {
+    if (setIsOpenMobileMenu) {
+      navigate(url)
+      setIsOpenMobileMenu(false)
+    } else {
+      navigate(url)
+    }
+  }
 
   // change menu item style class name based on the pathname url
 

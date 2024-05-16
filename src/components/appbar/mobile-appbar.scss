@@ -1,0 +1,38 @@
+.mobile__appbar__container {
+  transition: all 0.3s ease-in 0s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100svh;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+
+  animation: expandWidth 0.7s forwards;
+
+  @keyframes expandWidth {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  .mobile__appbar__top {
+    text-align: right;
+    padding: 1rem;
+  }
+
+  .mobile__appbar__menu__items {
+    display: flex;
+    justify-content: flex-end;
+    font-size: xx-large;
+
+    h6 {
+      cursor: pointer;
+      padding: 1rem;
+    }
+  }
+}

@@ -28,3 +28,8 @@ export interface TimezoneData {
   utc_offset: string
   week_number: number
 }
+
+export enum Device {
+  DESKTOP = 'desktop',
+  MOBILE = 'mobile',
+}
