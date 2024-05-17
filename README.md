@@ -35,3 +35,4 @@ If you have installed docker & docker-compose you can build a container:
 - `.env` variable for this project is included in the repository (only for this purpose)
 - Developed by using Node 20.7.0 (Currently using 64-bit executable)
 - free images were taken from `https://unsplash.com/`
+- free video was taken from `https://www.pexels.com/search/videos/business/`
