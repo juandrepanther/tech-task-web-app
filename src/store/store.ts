@@ -1,19 +1,14 @@
 import { create } from 'zustand'
-import { devtools, persist } from 'zustand/middleware'
+import { devtools } from 'zustand/middleware'
 
 interface Types {
-  theme: 'light' | 'dark'
-  changeTheme: () => void
+  isOpenModal: boolean
+  setModal: () => void
 }
 
 export const useAppStore = create<Types>()(
-  devtools(
-    persist(
-      (set) => ({
-        theme: 'dark',
-        changeTheme: () => set((state) => ({ theme: state.theme === 'light' ? 'dark' : 'light' })),
-      }),
-      { name: 'store' },
-    ),
-  ),
+  devtools((set) => ({
+    isOpenModal: true,
+    setModal: () => set((state) => ({ isOpenModal: !state.isOpenModal })),
+  })),
 )

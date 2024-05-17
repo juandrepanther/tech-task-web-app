@@ -8,6 +8,7 @@ import Appbar from './components/appbar/appbar'
 
 import './styles/_themes.scss'
 import './styles/_common.scss'
+import Modal from './components/modal/modal'
 
 export default function App() {
   const { darkTheme } = useContext(ThemeContext)
@@ -21,6 +22,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Appbar />
+      <Modal />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/details" element={<Details />} />
