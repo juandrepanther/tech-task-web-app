@@ -78,4 +78,15 @@
     text-align: center;
     margin: 3rem 0;
   }
+
+  ::placeholder {
+    color: var(--color);
+    opacity: 0.5;
+  }
+
+  ::-ms-input-placeholder {
+    color: var(--color);
+    opacity: 0.5;
+    color: red;
+  }
 }
