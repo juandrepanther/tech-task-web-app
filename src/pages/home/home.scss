@@ -1,6 +1,8 @@
 .home {
-  & h2 {
+  section {
     margin-top: 13rem;
+  }
+  & h2 {
     font-size: 3rem;
     text-align: center;
   }
@@ -11,6 +13,11 @@
     background-color: var(--secondary-color);
     padding: 1.2rem;
     margin-top: 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  & h3:hover {
+    background-color: var(--background-color-grey);
   }
 
   & h3:first-of-type {
@@ -21,5 +28,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .home__button__wrapper {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
   }
 }

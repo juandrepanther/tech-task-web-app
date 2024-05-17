@@ -1,11 +1,12 @@
 import GridBox from '../../components/grid-box/grid-box'
 import './home.scss'
 import hero_1_img from '../../assets/hero_1.jpg'
+import Button from '../../components/button/button'
 
 export const Home = () => {
   return (
     <div className="container page home">
-      <section className="">
+      <section>
         <h2>Mēs Tev piedāvājam</h2>
         <GridBox>
           <div className="home__text">
@@ -18,6 +19,10 @@ export const Home = () => {
             <img loading="lazy" className="zoomInOutEffect" src={hero_1_img} alt="hero image" />
           </div>
         </GridBox>
+        <h2>Aktuālākie apdrošināšanas produkti</h2>
+        <div className="home__button__wrapper">
+          <Button title="Apskatīties piedāvājumus" type="navigate" to="/details" />
+        </div>
       </section>
     </div>
   )

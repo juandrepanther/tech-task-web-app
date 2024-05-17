@@ -1,0 +1,26 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary-color);
+  margin: 1rem;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.9;
+
+  &:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding-left: 2.2rem;
+    opacity: 1;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+  }
+}
