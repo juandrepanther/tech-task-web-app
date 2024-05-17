@@ -5,6 +5,7 @@ export interface MenuType {
   url: UrlType
 }
 export type SelectedMenuType = 'selected__menu__item' | ''
+export type AppBarHideType = 'appbar__hide' | ''
 
 export enum Theme {
   DARK = 'dark',

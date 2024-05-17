@@ -3,7 +3,7 @@ html[data-theme='light'] {
   --background-color: #{$white-1};
   --background-color-grey: #{$grey-1};
   --primary-color: #{$blue-1};
-  --secondary-color: #{$grey-2};
+  --secondary-color: #{$white-2};
   --line-background-color: #{$white-1};
   --card-border-color: #{$grey-1};
   --selected-menu-background: #{$white-1};
@@ -14,7 +14,7 @@ html[data-theme='dark'] {
   --background-color: #{$neutral-900};
   --background-color-grey: #{$neutral-900};
   --primary-color: #{$blue-1};
-  --secondary-color: #{$neutral-500};
+  --secondary-color: #{$neutral-700};
   --line-background-color: #{$neutral-900};
   --card-border-color: #{$neutral-800};
   --selected-menu-background: #{$neutral-700};

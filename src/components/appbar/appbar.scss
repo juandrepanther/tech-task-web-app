@@ -5,13 +5,19 @@
   width: 100%;
   height: 10rem;
   background-color: var(--background-color-grey);
+  backdrop-filter: blur(3px);
   border-bottom: 1px solid var(--card-border-color);
   display: flex;
   flex-direction: column;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 
   .appbar__top {
+    position: relative;
     height: 3rem;
     padding: 0 1rem;
+    z-index: 4;
 
     .appbar__menu__container {
       height: 100%;
@@ -46,10 +52,33 @@
   .appbar__bottom {
     background-color: var(--line-background-color);
     height: calc(100% - 3rem);
+    display: flex;
+    align-items: center;
+
+    .appbar__bottom__text_logo {
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      opacity: 0.8;
+    }
+
+    img {
+      position: inherit;
+      width: 12%;
+      z-index: 1;
+    }
+
+    .appbar__logo {
+      padding: 0 1.5rem;
+    }
   }
 }
 
 .selected__menu__item {
   background-color: var(--selected-menu-background) !important;
   font-weight: 700;
+}
+
+.appbar__hide {
+  height: 3rem;
 }

@@ -8,7 +8,7 @@
   backdrop-filter: blur(5px);
   display: flex;
   flex-direction: column;
-
+  z-index: 3;
   animation: expandWidth 0.7s forwards;
 
   @keyframes expandWidth {
