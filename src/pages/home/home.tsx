@@ -9,14 +9,7 @@ export const Home = () => {
     <>
       <div className="container page home">
         <div>
-          <video
-            // poster={s3('heroPoster.png')}
-            width="100%"
-            src={video_bgd}
-            autoPlay
-            loop
-            muted
-          ></video>
+          <video width="100%" src={video_bgd} autoPlay loop muted></video>
           <div className="overlay"></div>
         </div>
 
