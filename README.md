@@ -1,5 +1,9 @@
 # Tech Task Web App
 
+## Deploy
+
+Already deployed on Vercel: `https://tech-task-web-app.vercel.app/`
+
 ## Run
 
 - `npm install`
