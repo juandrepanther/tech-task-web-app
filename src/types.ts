@@ -30,6 +30,12 @@ export interface TimezoneData {
   week_number: number
 }
 
+export enum MessageType {
+  OPEN = 'Perfekti, esam atvērti un gaidām Tevi ciemos.',
+  CLOSE = 'Ups! Šodien diemžēl esam ciet. Droši nāc rīt.',
+  NONE = '',
+}
+
 export enum Device {
   DESKTOP = 'desktop',
   MOBILE = 'mobile',

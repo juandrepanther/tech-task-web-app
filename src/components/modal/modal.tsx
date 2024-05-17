@@ -1,11 +1,28 @@
-import { useEffect } from 'react'
-import { useAppStore } from '../../store/store'
+import { useEffect, useState } from 'react'
+import { MdOutlineClose } from 'react-icons/md'
+import { MdOutlineDone } from 'react-icons/md'
+import { BsFillSignStopFill } from 'react-icons/bs'
+import { FaHandPaper } from 'react-icons/fa'
 import './modal.scss'
+import { MessageType, TimezoneData } from '../../types'
+import { getTimeZones } from '../../utils/requests'
+import { getHoursFromTimestamp } from '../../utils/helpers'
 
-export default function Modal() {
-  const { isOpenModal } = useAppStore()
+interface Props {
+  type: 'check' | 'send'
+  title?: string
+  description?: string
+  setIsOpen: (isOpen: boolean) => void
+  isOpenModal: boolean
+}
 
-  // disable scroll when modal is opened
+export default function Modal({ title, description, type, setIsOpen, isOpenModal }: Props) {
+  const [timezone, setTimezone] = useState<TimezoneData>()
+  const [message, setMessage] = useState<MessageType>(MessageType.NONE)
+
+  const closeModal = () => setIsOpen(false)
+
+  //disable scroll when modal is opened
 
   useEffect(() => {
     if (isOpenModal) {
@@ -13,11 +30,73 @@ export default function Modal() {
     } else {
       document.body.style.overflow = 'auto'
     }
-  }, [isOpenModal])
+  }, [isOpenModal, type])
+
+  // fetch data from API
+
+  useEffect(() => {
+    if (type === 'check') {
+      getTimeZones()
+        .then((data) => {
+          setTimezone(data)
+        })
+        .catch((err) => {
+          setMessage(MessageType.CLOSE)
+          console.log(err)
+        })
+    }
+  }, [type])
+
+  // check the availability b ase on the received data
+
+  useEffect(() => {
+    if (
+      timezone &&
+      timezone.day_of_week <= 5 &&
+      getHoursFromTimestamp(timezone.datetime) >= 7 &&
+      getHoursFromTimestamp(timezone.datetime) <= 18
+    ) {
+      setMessage(MessageType.OPEN)
+    } else {
+      setMessage(MessageType.CLOSE)
+    }
+  }, [timezone])
+
+  // use icon based on the message type
+
+  const AvailabilityIcon = () => {
+    switch (message) {
+      case MessageType.OPEN:
+        return <MdOutlineDone color="green" size={32} />
+      case MessageType.CLOSE:
+        return <BsFillSignStopFill color="darkred" size={32} />
+      default:
+        return <FaHandPaper size={32} />
+    }
+  }
 
   return (
     <div className={` overlay animated ${isOpenModal ? 'show' : ''}`}>
-      <div className="modal">Hello</div>
+      <div className="modal">
+        <div className="modal__close">
+          <MdOutlineClose size={32} onClick={closeModal} />
+        </div>
+        <div className="modal__content">
+          <h2>{title}</h2>
+          {type === 'check' && (
+            <>
+              <h3>{message}</h3>
+              <AvailabilityIcon />
+            </>
+          )}
+          {type === 'send' && (
+            <>
+              <p>{description}</p>
+              <MdOutlineDone size={44} color="green" />
+            </>
+          )}
+        </div>
+      </div>
     </div>
   )
 }
