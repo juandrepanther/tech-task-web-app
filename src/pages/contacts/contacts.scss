@@ -26,9 +26,55 @@
     margin-top: 0;
   }
 
+  & h4 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+  }
+
   .contacts__location {
     img {
       width: 100%;
     }
+  }
+
+  .input__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      background-color: var(--secondary-color);
+      width: 40%;
+      padding: 1.5rem;
+    }
+  }
+
+  form {
+    margin-top: 3rem;
+  }
+
+  textarea {
+    background-color: var(--secondary-color);
+    width: 100%;
+    padding: 1.5rem;
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  .contacts__button__wrapper {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+
+    button {
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+    margin: 3rem 0;
   }
 }

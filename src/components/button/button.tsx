@@ -18,12 +18,17 @@ export default function Button({ to, title, type, width = '17rem', height = '4re
     } else if (type === 'check') {
       console.log('check')
     } else if (type === 'submit') {
-      console.log('submit')
+      console.log('submit button pressed')
     }
   }
 
   return (
-    <button className="button" style={{ width, height }} onClick={handle}>
+    <button
+      type={type === 'submit' ? 'submit' : undefined}
+      className="button"
+      style={{ width, height }}
+      onClick={handle}
+    >
       <h2>{title}</h2>
       <IoArrowForwardOutline size={24} style={{ color: 'var(--primary-color)' }} />
     </button>

@@ -111,9 +111,13 @@ table {
 }
 
 input {
+  all: unset;
+}
+
+textarea {
   -webkit-appearance: none;
   appearance: none;
-  border-radius: 0;
+  all: unset;
 }
 
 button {
