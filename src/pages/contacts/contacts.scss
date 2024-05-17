@@ -57,8 +57,9 @@
     background-color: var(--secondary-color);
     width: 100%;
     padding: 1.5rem;
-    height: auto;
+    height: 8rem;
     margin-top: 1rem;
+    word-wrap: break-word;
   }
 
   .contacts__button__wrapper {
