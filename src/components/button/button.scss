@@ -22,5 +22,9 @@
     font-weight: 600;
     margin: 0;
     padding: 0;
+
+    &.button_title_hover_dark {
+      color: #fff; // Define dark hover color
+    }
   }
 }

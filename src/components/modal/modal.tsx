@@ -17,7 +17,7 @@ interface Props {
 }
 
 export default function Modal({ title, description, type, setIsOpen, isOpenModal }: Props) {
-  const [timezone, setTimezone] = useState<TimezoneData>()
+  const [timezone_LV, setTimezone_LV] = useState<TimezoneData>()
   const [message, setMessage] = useState<MessageType>(MessageType.NONE)
 
   const closeModal = () => setIsOpen(false)
@@ -38,7 +38,7 @@ export default function Modal({ title, description, type, setIsOpen, isOpenModal
     if (type === 'check') {
       getTimeZones()
         .then((data) => {
-          setTimezone(data)
+          setTimezone_LV(data)
         })
         .catch((err) => {
           setMessage(MessageType.CLOSE)
@@ -51,16 +51,16 @@ export default function Modal({ title, description, type, setIsOpen, isOpenModal
 
   useEffect(() => {
     if (
-      timezone &&
-      timezone.day_of_week <= 5 &&
-      getHoursFromTimestamp(timezone.datetime) >= 7 &&
-      getHoursFromTimestamp(timezone.datetime) <= 18
+      timezone_LV &&
+      timezone_LV.day_of_week <= 5 &&
+      getHoursFromTimestamp(timezone_LV.datetime) >= 7 &&
+      getHoursFromTimestamp(timezone_LV.datetime) <= 18
     ) {
       setMessage(MessageType.OPEN)
     } else {
       setMessage(MessageType.CLOSE)
     }
-  }, [timezone])
+  }, [timezone_LV])
 
   // use icon based on the message type
 
