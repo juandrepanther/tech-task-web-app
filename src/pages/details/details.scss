@@ -1,0 +1,12 @@
+.details {
+  position: relative;
+
+  section {
+    margin-top: 13rem;
+  }
+
+  & h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
