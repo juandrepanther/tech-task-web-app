@@ -9,7 +9,7 @@ export default function Details() {
         <h2>Vienmēr un vajadzīgajā brīdī</h2>
         <div className="cards__wrapper">
           {Cards.map((card) => (
-            <Card {...card} />
+            <Card {...card} key={card.title} />
           ))}
         </div>
       </section>
