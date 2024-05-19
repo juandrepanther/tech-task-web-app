@@ -17,6 +17,11 @@ export default function Appbar() {
   const { width } = useWindowSize()
   const scrollDirection = useScrollDirection('up')
 
+  const hideOnUpStyle = {
+    transition: 'all 0.3s ease-in-out',
+    opacity: scrollDirection === 'down' ? 0 : 1,
+  }
+
   // set device based on window size
 
   useEffect(() => {
@@ -70,15 +75,14 @@ export default function Appbar() {
         </div>
         <div className="appbar__bottom">
           <div className="container page appbar__bottom__text_logo">
-            <img className="appbar__logo" loading="lazy" src={if_logo} alt="if_logo" />
-            <h2
-              style={{
-                transition: 'all 0.3s ease-in-out',
-                opacity: scrollDirection === 'down' ? 0 : 1,
-              }}
-            >
-              Vienmēr Tavs Apdrošinātājs
-            </h2>
+            <img
+              style={hideOnUpStyle}
+              className="appbar__logo"
+              loading="lazy"
+              src={if_logo}
+              alt="if_logo"
+            />
+            <h2 style={hideOnUpStyle}>Vienmēr Tavs Apdrošinātājs</h2>
           </div>
         </div>
       </div>

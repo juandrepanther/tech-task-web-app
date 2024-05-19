@@ -9,7 +9,15 @@ export const Home = () => {
     <>
       <div className="container page home">
         <div>
-          <video width="100%" src={video_bgd} autoPlay loop muted></video>
+          <video
+            webkit-playsInline
+            playsInline
+            width="100%"
+            src={video_bgd}
+            autoPlay
+            loop
+            muted
+          ></video>
           <div className="overlay"></div>
         </div>
 
