@@ -52,6 +52,7 @@ export default function Modal({ title, description, type, setIsOpen, isOpenModal
   useEffect(() => {
     if (
       timezone_LV &&
+      timezone_LV.day_of_week >= 1 &&
       timezone_LV.day_of_week <= 5 &&
       getHoursFromTimestamp(timezone_LV.datetime) >= 7 &&
       getHoursFromTimestamp(timezone_LV.datetime) <= 18
