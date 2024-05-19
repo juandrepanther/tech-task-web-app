@@ -1,5 +1,14 @@
+import { CardType } from '../../pages/details/data'
 import './card.scss'
 
-export default function Card() {
-  return <div>card</div>
+export default function Card({ description, image, title }: CardType) {
+  return (
+    <div className="card__container">
+      <div className="card__img__wrapper">
+        <img className="zoomInOutEffect" src={image} alt="" />
+      </div>
+      <h2>{title}</h2>
+      <p>{description}</p>
+    </div>
+  )
 }

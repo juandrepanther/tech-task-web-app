@@ -1,0 +1,43 @@
+@import '../../styles/common.scss';
+
+.cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 1rem;
+  gap: 2rem;
+
+  .card__container {
+    width: 22rem;
+    height: 28rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 9px;
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-align: left;
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+      line-height: 1.4rem;
+    }
+
+    .card__img__wrapper {
+      height: 14rem;
+      width: 100%;
+      overflow: hidden;
+      border-top-left-radius: 9px;
+      border-top-right-radius: 9px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
