@@ -1,8 +1,8 @@
 import { MdOutlineClose } from 'react-icons/md'
 
 import './mobile-appbar.scss'
-import { menu } from './menu-urls'
-import { MenuItem } from './menu-item'
+import { menu } from '../menu-urls'
+import { MenuItem } from '../menu-item'
 
 interface Props {
   setIsOpenMobileMenu: (isOpenMobileMenu: boolean) => void

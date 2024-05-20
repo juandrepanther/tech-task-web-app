@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react'
-import { ThemeContext } from '../../context/theme-context'
+import { ThemeContext } from '../../../context/theme-context'
 import './toggle-switch.scss'
 interface Props {
   optionLabels: string[]
