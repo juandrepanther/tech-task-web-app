@@ -26,5 +26,19 @@ export default defineConfig(({ mode }) => {
     test: {
       reporters: ['html'],
     },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: (id) => {
+            if (id.includes('node_modules')) {
+              if (id.includes('react-icons')) {
+                return 'vendor_aws'
+              }
+              return 'vendor'
+            }
+          },
+        },
+      },
+    },
   }
 })
