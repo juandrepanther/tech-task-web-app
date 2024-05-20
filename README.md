@@ -6,6 +6,7 @@ Already deployed on Vercel: `https://tech-task-web-app.vercel.app/`
 
 ## Run
 
+- clone the repository (use HTTPS)
 - `npm install`
 - `npm run start`
 - open in the browser `http://localhost:5173/`
