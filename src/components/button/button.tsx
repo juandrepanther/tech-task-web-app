@@ -37,7 +37,11 @@ export default function Button({
         disabled={disabled}
         type={type === 'submit' ? 'submit' : undefined}
         className="button"
-        style={{ width, height }}
+        style={{
+          width,
+          height,
+          backgroundColor: type === 'submit' ? 'var(--primary-color)' : '',
+        }}
         onClick={handle}
       >
         {disabled ? (
@@ -45,7 +49,10 @@ export default function Button({
         ) : (
           <h2 className={darkTheme ? 'button_title_hover_dark' : ''}>{title}</h2>
         )}
-        <IoArrowForwardOutline size={24} style={{ color: 'var(--primary-color)' }} />
+        <IoArrowForwardOutline
+          size={24}
+          style={{ color: type !== 'submit' ? 'var(--primary-color)' : '#fff' }}
+        />
       </button>
     </div>
   )
