@@ -47,7 +47,7 @@ export default function Button({
         {disabled ? (
           <h2>Aizpildi formu</h2>
         ) : (
-          <h2 className={darkTheme ? 'button_title_hover_dark' : ''}>{title}</h2>
+          <h2 className={darkTheme ? 'button_title_hover_dark' : 'button_title'}>{title}</h2>
         )}
         <IoArrowForwardOutline
           size={24}
