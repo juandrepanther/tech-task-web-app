@@ -1,10 +1,10 @@
 import GridBox from '../../components/grid-box/grid-box'
-import './home.scss'
 import hero_1_img from '../../assets/hero_1.jpg'
 import video_bgd from '../../assets/video_bgd.mp4'
 import Button from '../../components/button/button'
+import './home.scss'
 
-export const Home = () => {
+export default function Home() {
   return (
     <>
       <div className="container page home">
