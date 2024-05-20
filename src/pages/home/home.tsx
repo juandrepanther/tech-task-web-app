@@ -1,7 +1,8 @@
 import GridBox from '../../components/grid-box/grid-box'
-import hero_1_img from '../../assets/hero_1.jpg'
 import video_bgd from '../../assets/video_bgd.mp4'
 import Button from '../../components/button/button'
+import hero_1_img from '../../assets/hero_1.jpg'
+import video_placeholder from '../../assets/video_placeholder.png'
 import './home.scss'
 
 export default function Home() {
@@ -9,7 +10,15 @@ export default function Home() {
     <>
       <div className="container page home">
         <div>
-          <video playsInline width="100%" src={video_bgd} autoPlay loop muted></video>
+          <video
+            poster={video_placeholder}
+            playsInline
+            width="100%"
+            src={video_bgd}
+            autoPlay
+            loop
+            muted
+          ></video>
           <div className="overlay"></div>
         </div>
 
