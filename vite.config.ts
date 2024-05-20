@@ -25,6 +25,8 @@ export default defineConfig(({ mode }) => {
     define: processEnvValues,
     test: {
       reporters: ['html'],
+      globals: true,
+      environment: 'jsdom',
     },
     build: {
       rollupOptions: {

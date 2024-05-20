@@ -11,7 +11,7 @@ export default function MobileAppbar({ setIsOpenMobileMenu }: Props) {
   const closeMobileMenu = () => setIsOpenMobileMenu(false)
 
   return (
-    <div className="mobile__appbar__container">
+    <nav className="mobile__appbar__container">
       <div className="mobile__appbar__top">
         <MdOutlineClose size={32} onClick={closeMobileMenu} style={{ cursor: 'pointer' }} />
       </div>
@@ -22,6 +22,6 @@ export default function MobileAppbar({ setIsOpenMobileMenu }: Props) {
           ))}
         </div>
       </div>
-    </div>
+    </nav>
   )
 }

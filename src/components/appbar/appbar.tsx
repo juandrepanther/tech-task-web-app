@@ -56,7 +56,7 @@ export default function Appbar() {
 
   return (
     <>
-      <div className={`appbar ${isHidden}`}>
+      <nav className={`appbar ${isHidden}`}>
         <div className="container page appbar__top">
           <div className="appbar__menu__container">
             {device === Device.DESKTOP ? (
@@ -85,7 +85,7 @@ export default function Appbar() {
             <h2 style={hideOnUpStyle}>Vienmēr Tavs Apdrošinātājs</h2>
           </div>
         </div>
-      </div>
+      </nav>
       {isOpenMobileMenu && <MobileAppbar setIsOpenMobileMenu={setIsOpenMobileMenu} />}
     </>
   )
