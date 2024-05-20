@@ -3,10 +3,11 @@ import { MdOutlineClose } from 'react-icons/md'
 import { MdOutlineDone } from 'react-icons/md'
 import { BsFillSignStopFill } from 'react-icons/bs'
 import { FaHandPaper } from 'react-icons/fa'
-import './modal.scss'
+import { MdErrorOutline } from 'react-icons/md'
 import { MessageType, TimezoneData } from '../../types'
 import { getTimeZones } from '../../utils/requests'
 import { getHoursFromTimestamp } from '../../utils/helpers'
+import './modal.scss'
 
 interface Props {
   type: 'check' | 'send'
@@ -41,7 +42,7 @@ export default function Modal({ title, description, type, setIsOpen, isOpenModal
           setTimezone_LV(data)
         })
         .catch((err) => {
-          setMessage(MessageType.CLOSE)
+          setMessage(MessageType.ERROR)
           console.log(err)
         })
     }
@@ -71,6 +72,8 @@ export default function Modal({ title, description, type, setIsOpen, isOpenModal
         return <MdOutlineDone color="green" size={32} />
       case MessageType.CLOSE:
         return <BsFillSignStopFill color="darkred" size={32} />
+      case MessageType.ERROR:
+        return <MdErrorOutline color="darkred" size={32} />
       default:
         return <FaHandPaper size={32} />
     }

@@ -31,8 +31,9 @@ export interface TimezoneData {
 }
 
 export enum MessageType {
-  OPEN = 'Perfekti, esam atvērti un gaidām Tevi ciemos.',
+  OPEN = 'Perfekti! Esam atvērti un gaidām Tevi ciemos.',
   CLOSE = 'Ups! Šodien diemžēl esam ciet. Droši nāc rīt.',
+  ERROR = 'Piedod, draugs. Diemžēl serviss nav pieejams!',
   NONE = '',
 }
 
