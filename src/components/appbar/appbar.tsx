@@ -8,7 +8,6 @@ import useWindowSize from '../../hooks/useWindowSize'
 import useScrollDirection from '../../hooks/useScrollDirection'
 import MobileAppbar from './mobile-appbar/mobile-appbar'
 import if_logo from '../../assets/if_logo.png'
-
 import './appbar.scss'
 export default function Appbar() {
   const [device, setDevice] = useState<Device>(Device.DESKTOP)

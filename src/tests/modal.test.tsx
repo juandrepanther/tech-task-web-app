@@ -4,7 +4,6 @@ import Modal from '../components/modal/modal'
 
 vi.mock('../../utils/requests')
 
-
 describe('Modal component', () => {
   it('should display error message when server is not responding', async () => {
     const mockError = new Error('Server not responding')

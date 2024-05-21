@@ -1,6 +1,6 @@
 import pc_img from '../../assets/pc.jpg'
 import people_img from '../../assets/people.jpg'
-import bibycle_img from '../../assets/bicycle.jpg'
+import bicycle_img from '../../assets/bicycle.jpg'
 import travel_img from '../../assets/travel.jpg'
 import house_img from '../../assets/house.jpg'
 
@@ -24,7 +24,7 @@ export const Cards: CardType[] = [
       'Apdrošinām Jūsu veselību un labklājību. Nodrošiniet sev un saviem mīļajiem visaptverošu aizsardzību un atbalstu dažādās dzīves situācijās.',
   },
   {
-    image: bibycle_img,
+    image: bicycle_img,
     title: 'Velosipēdi',
     description:
       'Apdrošinām Jūsu velosipēdus pret zādzībām un bojājumiem. Nodrošiniet sev šo garantiju ar mūsu apdrošināšanas pakalpojumiem.',

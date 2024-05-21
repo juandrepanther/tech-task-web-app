@@ -1,8 +1,8 @@
-import { IoArrowForwardOutline } from 'react-icons/io5'
-import './button.scss'
-import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { IoArrowForwardOutline } from 'react-icons/io5'
 import { ThemeContext } from '../../context/theme-context'
+import './button.scss'
 
 interface Props {
   title: React.ReactNode
