@@ -34,9 +34,9 @@ export default defineConfig(({ mode }) => {
           manualChunks: (id) => {
             if (id.includes('node_modules')) {
               if (id.includes('react-icons')) {
-                return 'vendor_aws'
+                return 'react-icons'
               }
-              return 'vendor'
+              return 'chunk_main'
             }
           },
         },
