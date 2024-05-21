@@ -28,6 +28,10 @@ If you have installed docker & docker-compose you can build a container:
 - at the root of the project, run `docker-compose up -d --build`
 - open `http://localhost:4000/` in the browser
 
+## Lighthouse results
+
+![lighthouse_results](/src/assets/lighthouse_results.PNG)
+
 ## Additionally, have been added:
 
 - Dockerfile
